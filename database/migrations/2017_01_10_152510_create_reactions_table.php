@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEchoesTable extends Migration
+class CreateReactionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateEchoesTable extends Migration
      */
     public function up()
     {
-        Schema::create('echoes', function (Blueprint $table) {
+        Schema::create('reactions', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateEchoesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('echoes');
+        Schema::dropIfExists('reactions');
     }
 }
