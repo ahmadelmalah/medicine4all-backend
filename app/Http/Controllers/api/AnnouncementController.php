@@ -4,6 +4,7 @@ namespace App\Http\Controllers\api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Announcement;
 
 class AnnouncementController extends Controller
 {
@@ -14,7 +15,7 @@ class AnnouncementController extends Controller
      */
     public function index()
     {
-        return 'Ann Index';
+        return "[{id:11, number:'111', name:'Smith'},{id:22, number:'222', name:'Smith'}]";
     }
 
     /**
@@ -35,7 +36,10 @@ class AnnouncementController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $announcement = new Announcement;
+        $announcement->desc = $request['desc'];
+        $announcement->save();
+        return $announcement;
     }
 
     /**
