@@ -15,6 +15,11 @@ class CreateAnnouncementsTable extends Migration
     {
         Schema::create('announcements', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('area_id');
+            $table->string('address', 200);
+            $table->text('desc');
+            $table->text('visit_time');
+            $table->integer('status');
             $table->timestamps();
         });
     }
