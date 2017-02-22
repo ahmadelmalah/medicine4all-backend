@@ -4,6 +4,7 @@ namespace App\Http\Controllers\api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App;
 
 class CityController extends Controller
 {
@@ -46,7 +47,7 @@ class CityController extends Controller
      */
     public function show($id)
     {
-        //
+        return App\City::find($id)->areas;
     }
 
     /**

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App;
 
 class CountryController extends Controller
 {
@@ -46,7 +47,7 @@ class CountryController extends Controller
      */
     public function show($id)
     {
-        //
+        return App\Country::find($id)->cities;
     }
 
     /**
