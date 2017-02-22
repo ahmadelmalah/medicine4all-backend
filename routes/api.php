@@ -18,3 +18,7 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:api');
 
 Route::resource('announcements', 'api\AnnouncementController');
+
+Route::resource('countries', 'api\CountryController');
+Route::resource('cities', 'api\CityController');
+Route::resource('areas', 'api\AreaController');
