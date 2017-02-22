@@ -37,6 +37,8 @@ class AnnouncementController extends Controller
     public function store(Request $request)
     {
         $announcement = new Announcement;
+        $announcement->area_id = $request['area_id'];
+        $announcement->address = $request['address'];
         $announcement->desc = $request['desc'];
         $announcement->save();
         return $announcement;
